@@ -1,3 +1,8 @@
+massiv=[]
+def printlist():
+    print(massiv)
+def kinoinput():
+    massiv.append(createkino())
 
 def createkino():
     kino=input('name')
@@ -9,9 +14,18 @@ def createkino():
     'look':looking
     }
     return film
-
-massiv=[]
-for i in range(0,5):
+def kinoinput():
     massiv.append(createkino())
-    print(massiv)
-    print('===')
+def vvod():
+    print('список или добавить?')
+    otvet=input('ответ')
+    if otvet=='список':
+        printlist()
+    elif otvet==('добавить'):
+        kinoinput()
+    elif otvet=='exit':
+        exit()
+    else:
+        print('нахуй иди')
+    vvod()
+vvod()
